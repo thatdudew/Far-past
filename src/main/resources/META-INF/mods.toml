@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="far_past"
+version="1.0.1"
+displayName="far past"
+displayURL="https://www.curseforge.com/minecraft/mc-mods"
+credits="java port by dinofan"
+authors="dinofan"
+description="far past"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.far_past]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.far_past]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

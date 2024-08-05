@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "deep_cold_ocean",
+    "deep_frozen_ocean",
+    "deep_lukewarm_ocean",
+    "deep_ocean",
+    "ocean"
+  ],
+  "spawners": {
+    "type": "far_past:tylosaur",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

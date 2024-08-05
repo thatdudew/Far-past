@@ -1,0 +1,17 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "plains",
+    "savanna",
+    "windswept_savanna",
+    "meadow",
+    "birch_forest",
+    "flower_forest"
+  ],
+  "spawners": {
+    "type": "far_past:lampeo",
+    "weight": 7,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}
