@@ -9,17 +9,17 @@ import bedrock.farpast.entity.BracheoEntity;
 public class BracheoModel extends GeoModel<BracheoEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(BracheoEntity entity) {
-		return new ResourceLocation("far_past", "animations/bracheo.animation.json");
+		return ResourceLocation.parse("far_past:animations/bracheo.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(BracheoEntity entity) {
-		return new ResourceLocation("far_past", "geo/bracheo.geo.json");
+		return ResourceLocation.parse("far_past:geo/bracheo.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(BracheoEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

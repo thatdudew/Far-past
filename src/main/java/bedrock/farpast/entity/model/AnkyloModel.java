@@ -9,17 +9,17 @@ import bedrock.farpast.entity.AnkyloEntity;
 public class AnkyloModel extends GeoModel<AnkyloEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(AnkyloEntity entity) {
-		return new ResourceLocation("far_past", "animations/ankylo.animation.json");
+		return ResourceLocation.parse("far_past:animations/ankylo.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(AnkyloEntity entity) {
-		return new ResourceLocation("far_past", "geo/ankylo.geo.json");
+		return ResourceLocation.parse("far_past:geo/ankylo.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(AnkyloEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

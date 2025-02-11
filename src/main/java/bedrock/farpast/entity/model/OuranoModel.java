@@ -9,17 +9,17 @@ import bedrock.farpast.entity.OuranoEntity;
 public class OuranoModel extends GeoModel<OuranoEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(OuranoEntity entity) {
-		return new ResourceLocation("far_past", "animations/ourano.animation.json");
+		return ResourceLocation.parse("far_past:animations/ourano.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(OuranoEntity entity) {
-		return new ResourceLocation("far_past", "geo/ourano.geo.json");
+		return ResourceLocation.parse("far_past:geo/ourano.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(OuranoEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

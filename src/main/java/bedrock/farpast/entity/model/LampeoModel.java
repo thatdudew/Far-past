@@ -9,17 +9,17 @@ import bedrock.farpast.entity.LampeoEntity;
 public class LampeoModel extends GeoModel<LampeoEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(LampeoEntity entity) {
-		return new ResourceLocation("far_past", "animations/lampeo.animation.json");
+		return ResourceLocation.parse("far_past:animations/lampeo.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(LampeoEntity entity) {
-		return new ResourceLocation("far_past", "geo/lampeo.geo.json");
+		return ResourceLocation.parse("far_past:geo/lampeo.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(LampeoEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

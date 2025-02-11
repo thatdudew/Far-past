@@ -4,17 +4,17 @@
  */
 package bedrock.farpast.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.core.registries.Registries;
 
 import bedrock.farpast.entity.TylosaurEntity;
 import bedrock.farpast.entity.TriceraEntity;
@@ -29,73 +29,73 @@ import bedrock.farpast.entity.AugustolophusEntity;
 import bedrock.farpast.entity.AnkyloEntity;
 import bedrock.farpast.FarPastMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class FarPastModEntities {
-	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, FarPastMod.MODID);
-	public static final RegistryObject<EntityType<SpinyEntity>> SPINY = register("spiny",
-			EntityType.Builder.<SpinyEntity>of(SpinyEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpinyEntity::new)
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, FarPastMod.MODID);
+	public static final DeferredHolder<EntityType<?>, EntityType<SpinyEntity>> SPINY = register("spiny",
+			EntityType.Builder.<SpinyEntity>of(SpinyEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 3f));
-	public static final RegistryObject<EntityType<AnkyloEntity>> ANKYLO = register("ankylo",
-			EntityType.Builder.<AnkyloEntity>of(AnkyloEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnkyloEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<AnkyloEntity>> ANKYLO = register("ankylo",
+			EntityType.Builder.<AnkyloEntity>of(AnkyloEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2f));
-	public static final RegistryObject<EntityType<AugustolophusEntity>> AUGUSTOLOPHUS = register("augustolophus",
-			EntityType.Builder.<AugustolophusEntity>of(AugustolophusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AugustolophusEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<AugustolophusEntity>> AUGUSTOLOPHUS = register("augustolophus",
+			EntityType.Builder.<AugustolophusEntity>of(AugustolophusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2.5f));
-	public static final RegistryObject<EntityType<BracheoEntity>> BRACHEO = register("bracheo",
-			EntityType.Builder.<BracheoEntity>of(BracheoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BracheoEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<BracheoEntity>> BRACHEO = register("bracheo",
+			EntityType.Builder.<BracheoEntity>of(BracheoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(4f, 6f));
-	public static final RegistryObject<EntityType<HadroEntity>> HADRO = register("hadro",
-			EntityType.Builder.<HadroEntity>of(HadroEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HadroEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<HadroEntity>> HADRO = register("hadro",
+			EntityType.Builder.<HadroEntity>of(HadroEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2.5f));
-	public static final RegistryObject<EntityType<LampeoEntity>> LAMPEO = register("lampeo",
-			EntityType.Builder.<LampeoEntity>of(LampeoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LampeoEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<LampeoEntity>> LAMPEO = register("lampeo",
+			EntityType.Builder.<LampeoEntity>of(LampeoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2.5f));
-	public static final RegistryObject<EntityType<OuranoEntity>> OURANO = register("ourano",
-			EntityType.Builder.<OuranoEntity>of(OuranoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OuranoEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<OuranoEntity>> OURANO = register("ourano",
+			EntityType.Builder.<OuranoEntity>of(OuranoEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2.5f));
-	public static final RegistryObject<EntityType<StegosaurusEntity>> STEGOSAURUS = register("stegosaurus",
-			EntityType.Builder.<StegosaurusEntity>of(StegosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StegosaurusEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<StegosaurusEntity>> STEGOSAURUS = register("stegosaurus",
+			EntityType.Builder.<StegosaurusEntity>of(StegosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2.5f));
-	public static final RegistryObject<EntityType<TrexEntity>> TREX = register("trex",
-			EntityType.Builder.<TrexEntity>of(TrexEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrexEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<TrexEntity>> TREX = register("trex",
+			EntityType.Builder.<TrexEntity>of(TrexEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(3f, 5f));
-	public static final RegistryObject<EntityType<TriceraEntity>> TRICERA = register("tricera",
-			EntityType.Builder.<TriceraEntity>of(TriceraEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TriceraEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<TriceraEntity>> TRICERA = register("tricera",
+			EntityType.Builder.<TriceraEntity>of(TriceraEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(2f, 2.5f));
-	public static final RegistryObject<EntityType<TylosaurEntity>> TYLOSAUR = register("tylosaur",
-			EntityType.Builder.<TylosaurEntity>of(TylosaurEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TylosaurEntity::new)
+	public static final DeferredHolder<EntityType<?>, EntityType<TylosaurEntity>> TYLOSAUR = register("tylosaur",
+			EntityType.Builder.<TylosaurEntity>of(TylosaurEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1.5f, 1.5f));
 
-	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
+	// Start of user code block custom entities
+	// End of user code block custom entities
+	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
 
 	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
-			SpinyEntity.init();
-			AnkyloEntity.init();
-			AugustolophusEntity.init();
-			BracheoEntity.init();
-			HadroEntity.init();
-			LampeoEntity.init();
-			OuranoEntity.init();
-			StegosaurusEntity.init();
-			TrexEntity.init();
-			TriceraEntity.init();
-			TylosaurEntity.init();
-		});
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		SpinyEntity.init(event);
+		AnkyloEntity.init(event);
+		AugustolophusEntity.init(event);
+		BracheoEntity.init(event);
+		HadroEntity.init(event);
+		LampeoEntity.init(event);
+		OuranoEntity.init(event);
+		StegosaurusEntity.init(event);
+		TrexEntity.init(event);
+		TriceraEntity.init(event);
+		TylosaurEntity.init(event);
 	}
 
 	@SubscribeEvent

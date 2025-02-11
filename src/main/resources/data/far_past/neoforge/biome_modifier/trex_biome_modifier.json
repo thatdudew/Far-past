@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "far_past:trex",
+    "weight": 4,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

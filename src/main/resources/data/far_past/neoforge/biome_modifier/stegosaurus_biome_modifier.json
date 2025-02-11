@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "savanna",
+    "windswept_savanna",
+    "meadow",
+    "flower_forest",
+    "birch_forest"
+  ],
+  "spawners": {
+    "type": "far_past:stegosaurus",
+    "weight": 5,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}

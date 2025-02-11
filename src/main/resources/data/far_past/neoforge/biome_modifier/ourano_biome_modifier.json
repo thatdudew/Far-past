@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "savanna",
+    "windswept_savanna",
+    "meadow",
+    "birch_forest",
+    "flower_forest"
+  ],
+  "spawners": {
+    "type": "far_past:ourano",
+    "weight": 5,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}

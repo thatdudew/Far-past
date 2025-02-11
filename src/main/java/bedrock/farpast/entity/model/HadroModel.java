@@ -9,17 +9,17 @@ import bedrock.farpast.entity.HadroEntity;
 public class HadroModel extends GeoModel<HadroEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(HadroEntity entity) {
-		return new ResourceLocation("far_past", "animations/hadro.animation.json");
+		return ResourceLocation.parse("far_past:animations/hadro.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(HadroEntity entity) {
-		return new ResourceLocation("far_past", "geo/hadro.geo.json");
+		return ResourceLocation.parse("far_past:geo/hadro.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(HadroEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

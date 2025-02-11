@@ -9,17 +9,17 @@ import bedrock.farpast.entity.AugustolophusEntity;
 public class AugustolophusModel extends GeoModel<AugustolophusEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(AugustolophusEntity entity) {
-		return new ResourceLocation("far_past", "animations/augustolophus.animation.json");
+		return ResourceLocation.parse("far_past:animations/augustolophus.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(AugustolophusEntity entity) {
-		return new ResourceLocation("far_past", "geo/augustolophus.geo.json");
+		return ResourceLocation.parse("far_past:geo/augustolophus.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(AugustolophusEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

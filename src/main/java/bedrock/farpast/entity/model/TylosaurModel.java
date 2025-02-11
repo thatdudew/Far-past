@@ -9,17 +9,17 @@ import bedrock.farpast.entity.TylosaurEntity;
 public class TylosaurModel extends GeoModel<TylosaurEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(TylosaurEntity entity) {
-		return new ResourceLocation("far_past", "animations/pa_tylosau.animation.json");
+		return ResourceLocation.parse("far_past:animations/pa_tylosau.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(TylosaurEntity entity) {
-		return new ResourceLocation("far_past", "geo/pa_tylosau.geo.json");
+		return ResourceLocation.parse("far_past:geo/pa_tylosau.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(TylosaurEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

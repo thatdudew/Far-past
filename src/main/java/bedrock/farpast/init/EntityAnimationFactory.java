@@ -1,8 +1,8 @@
 package bedrock.farpast.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import bedrock.farpast.entity.TylosaurEntity;
 import bedrock.farpast.entity.TriceraEntity;
@@ -16,10 +16,10 @@ import bedrock.farpast.entity.BracheoEntity;
 import bedrock.farpast.entity.AugustolophusEntity;
 import bedrock.farpast.entity.AnkyloEntity;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class EntityAnimationFactory {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		if (event != null && event.getEntity() != null) {
 			if (event.getEntity() instanceof SpinyEntity syncable) {
 				String animation = syncable.getSyncedAnimation();

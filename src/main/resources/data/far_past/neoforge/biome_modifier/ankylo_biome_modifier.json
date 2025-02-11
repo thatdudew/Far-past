@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "meadow",
+    "birch_forest",
+    "flower_forest"
+  ],
+  "spawners": {
+    "type": "far_past:ankylo",
+    "weight": 5,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

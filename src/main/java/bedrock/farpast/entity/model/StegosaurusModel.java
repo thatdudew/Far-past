@@ -9,17 +9,17 @@ import bedrock.farpast.entity.StegosaurusEntity;
 public class StegosaurusModel extends GeoModel<StegosaurusEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(StegosaurusEntity entity) {
-		return new ResourceLocation("far_past", "animations/pa_stegosauruss.animation.json");
+		return ResourceLocation.parse("far_past:animations/pa_stegosauruss.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(StegosaurusEntity entity) {
-		return new ResourceLocation("far_past", "geo/pa_stegosauruss.geo.json");
+		return ResourceLocation.parse("far_past:geo/pa_stegosauruss.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(StegosaurusEntity entity) {
-		return new ResourceLocation("far_past", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("far_past:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }
